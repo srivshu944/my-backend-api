@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: my-backend-api
+spec:
+  type: service
+  lifecycle: production
+  owner: my-org
+  providesApis:
+    - api: my-backend-api
+      versions: ['1']
+  dependencies:
+    - type: service
+      target: my-database
